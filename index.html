@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Grid Testing</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/grid-test.css">
+    </head>
+    <body class="debug">
+
+        <div class="wrapper">
+            <aside class="is-visible-on-debug">
+                <p>I am inside of <code>.wrapper</code></p>
+                <p>Notice how <code>.grid-unit</code> gutters fall outside of <code>.wrapper</code>. It is important that the <code>.wrapper</code> padding ≥ <code>.grid-unit</code> padding.</p>
+            </aside>
+            <div class="grid-container clearfix">
+
+                <div class="grid-unit"><div class="content"></div></div>
+                <div class="grid-unit"><div class="content"></div></div>
+                <div class="grid-unit"><div class="content"></div></div>
+                <div class="grid-unit"><div class="content"></div></div>
+                <div class="grid-unit"><div class="content"></div></div>
+
+            </div>            
+        </div>
+
+    </body>
+</html>

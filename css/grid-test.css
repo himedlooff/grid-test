@@ -1,0 +1,118 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/*
+ * Layout
+ */
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.grid-unit {
+    margin: 15px 0;
+}
+
+@media all and (min-width: 640px) {
+    .grid-container {
+        margin: 0 -15px;
+    }
+    .grid-unit {
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        padding: 0 15px;
+        width: 100%;
+    }
+}
+@media all and (min-width: 640px) {
+    .wrapper {
+        padding: 15px 30px;
+    }
+    .grid-unit {
+        width: 50%;
+    }    
+}
+@media all and (min-width: 960px) {
+    .grid-unit {
+        width: 33.33333333%;
+    }    
+}
+@media all and (min-width: 1200px) {
+    .grid-unit {
+        width: 20%;
+    }    
+}
+
+/*
+ * Modules
+ */
+
+.content {
+    height: 100px;
+    background: rgba(50,100,180,1);
+    border-radius: 4px;
+}
+
+/*
+ * Debug
+ */
+
+.is-visible-on-debug {
+    display: none;
+}
+
+.debug .is-visible-on-debug {
+    display: inherit;
+}
+
+.debug .grid-unit {
+    background: rgba(255,0,0,.5);
+}
+
+@media all and (min-width: 1200px) {
+    .debug .grid-unit + .grid-unit {
+        border-left: 1px solid rgba(50,100,180,1);
+    }    
+}
+
+/*
+ * Utilities
+ */
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
