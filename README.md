@@ -1,0 +1,1 @@
+Inspired by: http://dbushell.com/2013/03/19/on-responsive-layout-and-grids/
